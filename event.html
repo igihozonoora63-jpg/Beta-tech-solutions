@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beta Tech Solutions</title>
+</head>
+<body>
+
+    <nav>
+        <ul>
+              <li><h1>Beta Tech Solutions</h1></li> 
+            <li><a href="#">User login Form</a></li>
+            <li><a href="#">Employee registration Form</a></li>
+            <li><a href="#">Product registration form</a></li>
+            <li><a href="#">Customer Feedback form</a></li>
+            <li><a href="event.html">Event booking form</a></li>
+        </ul>
+    </nav>
+    <h2>Event Booking Form</h2>
+  <div class="form-container">
+
+    <label>Full Name</label>
+    <input type="text" placeholder="Enter your full name" required>
+
+    <label>Email Address</label>
+    <input type="email" placeholder="Enter your email" required>
+
+    <label>Phone Number</label>
+    <input type="tel" placeholder="Enter your phone number" required>
+
+    <label>Event Type</label>
+    <select required>
+        <option value="">Select event type</option>
+        <option>Wedding</option>
+        <option>Birthday</option>
+        <option>Conference</option>
+        <option>Party</option>
+    </select>
+
+    <label>Event Date</label>
+    <input type="date" required>
+
+    <label>Number of Guests</label>
+    <input type="number" placeholder="Enter number of guests">
+
+    <label>Additional Notes</label>
+    <textarea placeholder="Write any special requests..."></textarea>
+
+    <button type="submit">Book Event</button>
+
+</div>
+    <style>
+       h2 {
+    text-align: center;
+    margin-top: 40px;
+    color: #333;
+}
+
+.form-container {
+    width: 40%;
+    margin: 30px auto;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.form-container label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+    border-color: #6366f1;
+    outline: none;
+    box-shadow: 0 0 5px rgba(99,102,241,0.4);
+}
+
+.form-container textarea {
+    resize: none;
+    height: 80px;
+}
+
+.form-container button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    background: linear-gradient(90deg, #3b3be6, #6366f1);
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-container button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    }
+
+    nav {
+        background: linear-gradient(90deg, #3b3be6, #6366f1);
+        padding: 15px 30px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li h1 {
+        color: white;
+        margin: 0;
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 8px 12px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        background-color: rgba(255,255,255,0.2);
+        transform: translateY(-2px);
+    }
+
+
+    nav ul li:first-child {
+        margin-right: auto;
+    }
+
+  
+    body::after {
+        content: "";
+        display: block;
+        height: 40px;
+    }
+
+    </style>
+</body>
+</html>
