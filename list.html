@@ -1,119 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Customer List</title>
+    <meta charset="UTF-8">
+    <title>Customer List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            padding: 20px;
+        }
 
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f4f6f8;
-    }
-    
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: linear-gradient(to right, #3f51b5, #5a67d8);
-        padding: 15px 30px;
-        color: white;
-    }
+        h2 {
+            text-align: center;
+        }
 
-    .logo {
-        font-size: 22px;
-        font-weight: bold;
-    }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
 
-    .nav-links {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-    }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
 
-    .nav-links a {
-        color: white;
-        text-decoration: none;
-        font-size: 14px;
-    }
+        li {
+            padding: 10px;
+            margin: 8px 0;
+            background: #e3f2fd;
+            border-radius: 5px;
+        }
 
-    .nav-links a:hover {
-        text-decoration: underline;
-    }
+        .name {
+            font-weight: bold;
+        }
 
-    
-    .container {
-        max-width: 800px;
-        margin: 60px auto;
-        background: white;
-        padding: 25px;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-        text-align: center;
-        color: #3f51b5;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-    }
-
-    th, td {
-        padding: 12px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-    }
-
-    th {
-        background-color: #3f51b5;
-        color: white;
-    }
-
-    tr:hover {
-        background-color: #f1f1f1;
-    }
-</style>
-
+        .email {
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
 
-
-<div class="navbar">
-    <div class="logo">Beta Tech Solutions</div>
-
-    <div class="nav-links">
-        <a href="login.html">User Login Form</a>
-        <a href="employee.html">Employee Registration Form</a>
-        <a href="Product.html">Product Registration Form</a>
-        <a href="feedback.html">Customer Feedback Form</a>
-        <a href="event.html">Event Booking Form</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="question.html">FAQ</a>
-        <a href="list.html">List of Customers</a>
-    </div>
-</div>
-
-
 <div class="container">
     <h2>Customer List</h2>
-
-    <table id="customerTable">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+    <ul id="customerList"></ul>
 </div>
 
 <script>
+    // 5 customers
     const customers = [
         { id: 1, name: "John Doe", email: "john@example.com" },
         { id: 2, name: "Jane Smith", email: "jane@example.com" },
@@ -122,17 +62,17 @@
         { id: 5, name: "David Wilson", email: "david@example.com" }
     ];
 
-    const tableBody = document.querySelector("#customerTable tbody");
+    const list = document.getElementById("customerList");
 
-    customers.forEach(c => {
-        const row = `
-            <tr>
-                <td>${c.id}</td>
-                <td>${c.name}</td>
-                <td>${c.email}</td>
-            </tr>
+    customers.forEach(customer => {
+        const li = document.createElement("li");
+
+        li.innerHTML = `
+            <div class="name">${customer.name}</div>
+            <div class="email">${customer.email}</div>
         `;
-        tableBody.innerHTML += row;
+
+        list.appendChild(li);
     });
 </script>
 
